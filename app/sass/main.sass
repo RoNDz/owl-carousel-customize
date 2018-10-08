@@ -1,0 +1,85 @@
+@import "fonts"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+
+#carousel .item
+	background: #0c83e7
+	padding: 80px 0px
+	margin: 5px
+	color: #FFF
+	-webkit-border-radius: 3px
+	-moz-border-radius: 3px
+	border-radius: 3px
+	text-align: center
+
+.owl-theme
+	.owl-nav [class*='owl-']
+		transition: all .3s ease
+		&.disabled:hover
+			background-color: #D6D6D6
+	.owl-dots .owl-stage-outer.active span
+		background: #869791
+
+#carousel.owl-theme
+	position: relative
+	.owl-next
+		width: 22px
+		height: 22px
+		position: absolute
+		top: 50%
+		transform: translateY(-125%)
+	.owl-prev
+		width: 22px
+		height: 22px
+		position: absolute
+		top: 50%
+		transform: translateY(-125%)
+		left: 10px
+	.owl-next
+		right: 10px
+
+
+@import "media" // Всегда в конце
