@@ -1,5 +1,8 @@
 .*
 !.gitignore
 
+app/js/_scripts.min.js
+
 node_modules/
+
 package-lock.json

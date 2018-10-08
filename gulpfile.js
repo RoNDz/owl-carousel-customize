@@ -22,7 +22,12 @@ gulp.task('browser-sync', function () {
 // Пользовательские скрипты проекта
 gulp.task('js', function () {
     return gulp
-        .src('app/js/*.js')
+        .src([
+            'app/js/options.js',
+            'app/js/DynamicDotsStyle.js',
+            'app/js/ImageCarousel.js',
+            'app/js/DotsCarousel.js',
+        ])
         .pipe(concat('_scripts.min.js'))
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.reload({stream: true}));
